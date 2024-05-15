@@ -8,7 +8,9 @@ st.set_page_config(page_title="Treslancer Chatbot",
                        'Report a bug': 'https://www.facebook.com/itsjustjl',
                         'About': "Chatbot powered by OpenAI for TBI!"
                    })
-st.session_state.messages = [{"role": "assistant", "content": "How may I assist you today?"}]
+# st.session_state.messages = [{"role": "assistant", "content": "How may I assist you today?"}]
+if "messages" not in st.session_state:
+    st.session_state.messages = [{"role": "assistant", "content": "How may I assist you today?"}]
 
 selected_option = st.selectbox("Select domain option:", ["Wild_Cats_Innovation_Labs", "Technopreneurship", "Test"])
 
@@ -73,8 +75,8 @@ with st.sidebar:
 
 
 # Initialize chat history
-if "messages" not in st.session_state:
-    st.session_state.messages = []
+# if "messages" not in st.session_state:
+    # st.session_state.messages = []
 
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
