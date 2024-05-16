@@ -12,7 +12,7 @@ st.set_page_config(page_title="Treslancer Chatbot",
 if "messages" not in st.session_state:
     st.session_state.messages = [{"role": "assistant", "content": "How may I assist you today?"}]
 
-selected_option = st.selectbox("Select domain option:", ["Wild_Cats_Innovation_Labs", "Technopreneurship", "Test"])
+selected_option = st.selectbox("Select domain option:", ["Technopreneurship", "Wild_Cats_Innovation_Labs"])
 
 # Streamed response emulator
 def response_generator(input_text):
