@@ -22,7 +22,7 @@ selected_option = st.selectbox("Select domain option:", ["Technopreneurship", "W
 def response_generator(input_text):
     try:
         print(st.session_state.uuid_param)
-        response = requests.get("https://chatbot-private.onrender.com/query/fusion_retriever/", params={"query": input_text, "course_name": selected_option, "user": st.session_state.uuid_param})
+        response = requests.get("https://renderv2-gntp.onrender.com/query/fusion_retriever/", params={"query": input_text, "course_name": selected_option, "user": st.session_state.uuid_param})
         if response.status_code == 200:
             # Access the text attribute to get the response content
             response_text = response.text.replace("\\n", "\n")
