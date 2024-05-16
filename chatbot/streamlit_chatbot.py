@@ -1,6 +1,7 @@
 import streamlit as st
 import requests
 import time
+import uuid
 
 st.set_page_config(page_title="Treslancer Chatbot", 
                    menu_items={
@@ -11,13 +12,17 @@ st.set_page_config(page_title="Treslancer Chatbot",
 # st.session_state.messages = [{"role": "assistant", "content": "How may I assist you today?"}]
 if "messages" not in st.session_state:
     st.session_state.messages = [{"role": "assistant", "content": "How may I assist you today?"}]
+    
+if "uuid_param" not in st.session_state:
+    st.session_state.uuid_param = str(uuid.uuid4())
 
 selected_option = st.selectbox("Select domain option:", ["Technopreneurship", "Wild_Cats_Innovation_Labs"])
 
 # Streamed response emulator
 def response_generator(input_text):
     try:
-        response = requests.get("https://renderv2-gntp.onrender.com/query/fusion_retriever/", params={"query": input_text, "course_name": selected_option})
+        print(st.session_state.uuid_param)
+        response = requests.get("https://chatbot-private.onrender.com/query/fusion_retriever/", params={"query": input_text, "course_name": selected_option, "user": st.session_state.uuid_param})
         if response.status_code == 200:
             # Access the text attribute to get the response content
             response_text = response.text.replace("\\n", "\n")
