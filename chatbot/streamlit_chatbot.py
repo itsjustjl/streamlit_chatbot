@@ -17,7 +17,7 @@ selected_option = st.selectbox("Select domain option:", ["Technopreneurship", "W
 # Streamed response emulator
 def response_generator(input_text):
     try:
-        response = requests.get("https://chatbot-private.onrender.com/query/fusion_retriever/", params={"query": input_text, "course_name": selected_option})
+        response = requests.get("https://renderv2-gntp.onrender.com/query/fusion_retriever/", params={"query": input_text, "course_name": selected_option})
         if response.status_code == 200:
             # Access the text attribute to get the response content
             response_text = response.text.replace("\\n", "\n")
