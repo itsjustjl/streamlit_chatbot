@@ -49,7 +49,7 @@ def response_generator(input_text):
     except Exception as e:
         return "Hmm, I'm not sure."
 
-st.title("Come chat with me!")
+st.title("Specialized chatbot constrained to a single topic/course.")
 
 faq_templates = {
     "Technopreneurship": {
