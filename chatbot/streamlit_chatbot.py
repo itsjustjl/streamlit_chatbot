@@ -58,7 +58,7 @@ faq_templates = {
         "How to start a tech-based startup?": "Could you provide some tips on how to start a tech-based startup?"
     },
     "Wild_Cats_Innovation_Labs": {
-        "Who are the members of WIL?": "Can you provide information about the members of WIL?",
+        "What is facility booking?": "Can you provide information about facility booking?",
         "When was the Codechum MOA signing?": "When did the Codechum MOA signing take place?",
         "What is TBI?": "Could you explain what TBI is?"
     }
