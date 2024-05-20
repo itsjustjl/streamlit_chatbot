@@ -53,9 +53,9 @@ st.title("Specialized chatbot constrained to a single topic/course.")
 
 faq_templates = {
     "Technopreneurship": {
-        "Who are the key players in Technopreneurship?": "Can you provide information about the key players in Technopreneurship?",
-        "What are the latest trends in Technopreneurship?": "What are the latest trends in Technopreneurship?",
-        "How to start a tech-based startup?": "Could you provide some tips on how to start a tech-based startup?"
+        "What is Technopreneurship?": "Can you provide information about Technopreneurship?",
+        "What is TAM?": "Explain what is TAM.",
+        "What is the difference between entrepreneur and technopreneurship?": "Provide the difference between entrepreneur and technopreneurship."
     },
     "Wild_Cats_Innovation_Labs": {
         "What is facility booking?": "Can you provide information about facility booking?",
